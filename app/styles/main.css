@@ -167,3 +167,7 @@ html, body {
 #preload-01 {
   background: url('images/loading.gif') no-repeat -9999px -9999px;
 }
+
+#preload-02 {
+  background: url('images/error.jpg') no-repeat -9999px -9999px;
+}

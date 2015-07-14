@@ -53,7 +53,7 @@
         this.controller = null;
         this.scrollToTop = function() {
             if (getScrollTop() > 5) {
-                window.scrollTo(0, max((getScrollTop() - 90), 0));
+                window.scrollTo(0, max((getScrollTop() - max(90, getScrollTop() / 17)), 0));
                 setTimeout('BackToTop.scrollToTop()', 10);
             }
         };
