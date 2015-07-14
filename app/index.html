@@ -34,7 +34,7 @@
   <div class="pic-wrapper clearfix">
     <ul class="pic-column" id="ul1">
       <li class="pic-item">
-        <a href="images/1.jpg" class="pic" target="_blank"><img src="images/loading.gif" data-original="images/mini1.jpg" alt="图片1"></a>
+        <a href="images/1.jpg" class="pic" target="_blank"><img src="images/loading.gif" data-original="images/mini134324.jpg" alt="图片1" onerror="alert('fsdfd');this.src='./images/error.jpg'"></a>
         <div class="info">
           <div class="tool"></div>
           <p class="desc">图片1的说明</p>
@@ -416,8 +416,8 @@
 <!-- endbuild -->
 
 <!-- build:js(.) scripts/plugins.js -->
-<script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
-<script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
+<!--<script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>-->
+<!--<script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>-->
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -430,6 +430,12 @@
 <!--ga('create','UA-XXXXX-X');ga('send','pageview');-->
 <!--</script>-->
 
+<!-- build:js({app,.tmp}) scripts/jquery.lazyload.js -->
+<script src="scripts/jquery.lazyload.js"></script>
+<!-- endbuild -->
+<!-- build:js({app,.tmp}) scripts/jquery.scrollstop.js -->
+<script src="scripts/jquery.scrollstop.js"></script>
+<!-- endbuild -->
 <!-- build:js({app,.tmp}) scripts/scroll.js -->
 <script src="scripts/scroll.js"></script>
 <!-- endbuild -->
