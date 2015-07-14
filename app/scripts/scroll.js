@@ -42,7 +42,7 @@
     };
 
     var display = function() {
-        if (getScrollTop() < 30) {
+        if (getScrollTop() < 20) {
             addClassName(this.controller, 'hidden');
         } else {
             removeClassName(this.controller, 'hidden');
@@ -54,7 +54,7 @@
         this.scrollToTop = function() {
             if (getScrollTop() > 5) {
                 window.scrollTo(0, max((getScrollTop() - 90), 0));
-                setTimeout(function(){return 'BackToTop.scrollToTop()';}, 10);
+                setTimeout('BackToTop.scrollToTop()', 10);
             }
         };
         this.init = function(style) {
@@ -77,11 +77,6 @@
                 addClassName(this.controller, 'hidden');
             }
             document.body.appendChild(this.controller);
-            document.onkeydown = function(keyEvent) {
-                if (keyEvent.which === 38 && keyEvent.ctrlKey) {
-                    window.BackToTop.scrollToTop();
-                }
-            };
             window.addEventListener('scroll', display.bind(this));
             this.controller.addEventListener('click', this.scrollToTop.bind(this));
         };
