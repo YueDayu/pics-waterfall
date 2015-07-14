@@ -1,1 +1,1 @@
-console.log('\'Allo \'Allo!');
+window.BackToTop.init({RightDown: true});
