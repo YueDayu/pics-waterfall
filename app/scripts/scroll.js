@@ -72,7 +72,6 @@
             } else if (style.x && style.y) {
                 this.controller.setAttribute('style', 'left:' + style.x + 'px;top:' + style.y + 'px;');
             }
-            console.log(getScrollTop());
             if (getScrollTop() < 20) {
                 addClassName(this.controller, 'hidden');
             }
