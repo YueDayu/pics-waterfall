@@ -16,6 +16,9 @@
     return res;
   };
   var append_pic = function (num) {
+    if (img_data === null) {
+      return;
+    }
     if (currnet_num >= max) {
       return;
     }
@@ -40,14 +43,11 @@
         $('#col0').append(newNode);
       } else {
         var min = get_min_col(height);
-        console.log(min);
         $('#col' + min).append(newNode);
         height[min] += (width * a);
       }
       currnet_num++;
       $(newNode.getElementsByTagName('img')).lazyload({
-        //threshold: - width * a / 3,
-        //event: 'scrollstop',
         effect: 'fadeIn',
         error: function () {
           this.src = './images/error.jpg';
@@ -61,6 +61,7 @@
       append_pic(20);
     });
     window.BackToTop.init({RightDown: true});
+    //document.body.parentNode.style.overflow="hidden";
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() * 1.3 > $(document).height()) {
         append_pic(10);

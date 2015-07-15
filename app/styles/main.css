@@ -71,6 +71,7 @@ html, body {
   width: 99%;
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  cursor: pointer;
 }
 
 .small-panel:hover {
@@ -164,10 +165,104 @@ html, body {
   }
 }
 
-#preload-01 {
-  background: url('images/loading.gif') no-repeat -9999px -9999px;
+#bg {
+  background-color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
 }
 
-#preload-02 {
-  background: url('images/error.jpg') no-repeat -9999px -9999px;
+#main-body {
+  background-color: #fefefe;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  z-index: 100001;
+  box-shadow: 0 0 20px #999999;
+}
+
+#pic-area {
+  width: 100%;
+  display:table-cell;
+  vertical-align:middle;
+}
+
+#pic {
+  max-width: 80%;
+}
+
+#pic-outer {
+  width: 100%;
+  height: 100%;
+  display:table;
+}
+
+#show-pic {
+  display: none;
+}
+
+#scroll-frame {
+  position: absolute;
+  overflow: auto;
+  width: 75%;
+  background-color: #333;
+  height: 100%;
+  text-align: center;
+}
+
+#info {
+  color: #fff;
+  background: #000 no-repeat fixed top;
+  position: absolute;
+  width: 75%;
+  bottom: 0;
+  left: 0;
+  /*display: none;*/
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#pic-frame:hover #info {
+  opacity: 1;
+}
+
+#side-bar {
+  overflow: auto;
+  font-size: 0.9em;
+  position: absolute;
+  width: 24.4%;
+  right: 0.3%;
+  height: 100%;
+}
+
+#comments div {
+  margin-left: 5%;
+}
+
+.comment p {
+  margin-left: 5%;
+  margin-top: 1px;
+}
+
+.comment h4 {
+  margin-bottom: 2px;
+}
+
+.comment hr {
+  opacity: .3;
+}
+
+#side-bar button {
+  background-color: white;
+  border: solid 1px cornflowerblue;
+}
+
+#side-bar button:active {
+  background-color: #999;
 }

@@ -19,6 +19,8 @@
   <!-- endbuild -->
 </head>
 <body class="section-post">
+<img class="hidden" src="images/loading.gif"/>
+
 <header class="nav">
   <div id="top-bar">
     <img id="top-img" src="./favicon.ico"/>
@@ -36,6 +38,36 @@
   </div>
   <div id="footer" class="footer">
     &copy; Developed and designed by <b>Yue Dayu</b><br/>School of Software<br/>Tsinghua University
+  </div>
+</div>
+
+<div id="show-pic">
+  <div id="bg"></div>
+  <div id="main-body">
+    <div id="scroll-frame">
+    <div id="pic-outer">
+      <div id="pic-area">
+        <!--<img id="pic" src="images/36.jpg"/>-->
+      </div>
+    </div>
+    </div>
+    <div id="side-bar">
+      <h3>描述</h3>
+      <p id="describe">这个是描述</p>
+      <p id="distance">距离：1000km</p>
+      <button id="close">关闭</button>
+      <hr/>
+      <h3>评论</h3>
+      <div id="comments">
+        <div class="comment">
+          <h4>张哲:</h4>
+          <p>我是猪队友</p>
+          <hr/>
+        </div>
+      </div>
+      <button id="last-page">上一页</button>
+      <button id="next-page">下一页</button>
+    </div>
   </div>
 </div>
 
@@ -64,7 +96,7 @@
 <script src="scripts/jquery.lazyload.js"></script>
 <!-- endbuild -->
 <!-- build:js({app,.tmp}) scripts/jquery.scrollstop.js -->
-<script src="scripts/jquery.scrollstop.js"></script>
+<!--<script src="scripts/jquery.scrollstop.js"></script>-->
 <!-- endbuild -->
 <!-- build:js({app,.tmp}) scripts/scroll.js -->
 <script src="scripts/scroll.js"></script>
