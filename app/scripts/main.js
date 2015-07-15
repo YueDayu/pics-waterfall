@@ -6,13 +6,15 @@
   var currentMax = 0;
   var currentPos = null;
   var show_comment = function(id, page) {
-    $('#comments').html("");
+    var comments = $('#comments');
+    comments.html('<p>加载中...</p>');
     $.getJSON('./data/img_' + id +'_comment_page_' + page + '.json', function(data) {
+      comments.html("");
       for (var x = 0; x < data.length; x++) {
         var newComment = document.createElement('div');
         newComment.setAttribute('class', 'comment');
         newComment.innerHTML = '<h4>' + data[x].name + ':</h4><p>' + data[x].comment +'</p><hr/>';
-        $('#comments').append(newComment);
+        comments.append(newComment);
       }
     });
   };
@@ -159,6 +161,7 @@
     window.BackToTop.init({RightDown: true});
     $('#bg').click(click_close);
     $('#close').click(click_close);
+    $('#pic').click(click_close);
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() * 1.3 > $(document).height()) {
         append_pic(10);
@@ -167,4 +170,3 @@
   });
   window.click_pic = click_pic;
 })();
-
